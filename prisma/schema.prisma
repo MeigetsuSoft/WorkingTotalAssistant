@@ -24,3 +24,16 @@ model staff {
     LastUpdateAt DateTime @updatedAt
 }
 
+model user {
+    MeigetsuID String @db.VarChar(13) @unique @id
+    MailAddress String @db.VarChar(319)
+    UserName String @db.Text
+    FirstName String? @db.Text
+    FamilyName String? @db.Text
+    MiddleName String? @db.Text
+    Country String? @db.Text
+    PostalCode String? @db.VarChar(10)
+    Address String? @db.Text
+    Birthday DateTime? @db.Date
+    MyNumber String? @db.VarChar(13)
+}
