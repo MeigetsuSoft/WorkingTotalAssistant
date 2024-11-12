@@ -12,3 +12,15 @@ datasource db {
     provider = "mysql"
     url      = env("WTA_DATABASE_URL")
 }
+
+model staff {
+    ID String @db.VarChar(9) @unique @id
+    StaffName String @db.Text
+    Address String @db.Text
+    PhoneNumber String @db.VarChar(15)
+    MyNumber String @db.VarChar(13) @unique
+    Password String @db.VarChar(256)
+    Role String @db.VarChar(10)
+    LastUpdateAt DateTime @updatedAt
+}
+
